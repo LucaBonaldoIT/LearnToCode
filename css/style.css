@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 :root {
     --bg-color: #1c1a1f;
     --page-section-color: rgb(255, 255, 255);
@@ -21,11 +25,16 @@ body {
     position: relative;
     width: 85%;
     height: auto;
-    padding: 3%;
+    padding: 4rem;
     margin: 2rem auto;
     background-color: var(--page-section-color);
     box-shadow: var(--page-shadow);
     border-radius: 4px;
+}
+
+.max-width {
+    max-width: 70rem;
+    width: 70rem;
 }
 
 .page-section h1 {
@@ -42,6 +51,7 @@ body {
     font-size: 1.1rem;
     color: #000000;
     margin: 0.5rem 0;
+    text-align: justify;
 }
 
 .page-section pre {
@@ -62,6 +72,23 @@ body {
     color: white;
 }
 
+img {
+    min-width: 300px;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 900px) {
+    img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
 em {
     color: #ff0000;
 }
@@ -72,4 +99,19 @@ a {
 
 a:hover {
     color: #ff0000;
+}
+
+.c-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media only screen and (max-width: 785px) {
+    .c-row {
+        display: block;
+    }
 }
